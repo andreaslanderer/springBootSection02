@@ -3,6 +3,8 @@ package com.landerer.bookstore.controller;
 import com.landerer.bookstore.model.Author;
 import com.landerer.bookstore.repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -48,7 +50,8 @@ public class AuthorRestControllerV1 {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<GetAuthorResponse> getAuthors() {
-        return StreamSupport.stream(this.repository.findAll().spliterator(), false)
+        final Pageable limit = new PageRequest(0,100);
+        return StreamSupport.stream(this.repository.findAll(limit).spliterator(), false)
                 .map(this::getGetAuthorResponse)
                 .collect(Collectors.toList());
     }
