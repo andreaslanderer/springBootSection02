@@ -1,3 +1,8 @@
-com/landerer/bookstore/model/Book.class
+com/landerer/bookstore/repositories/BookRepository.class
+com/landerer/bookstore/controller/AuthorRestController$CreateAuthorResponse.class
 com/landerer/bookstore/model/Author.class
+com/landerer/bookstore/controller/AuthorRestController$CreateAuthorRequest.class
+com/landerer/bookstore/controller/AuthorRestController.class
+com/landerer/bookstore/repositories/AuthorRepository.class
+com/landerer/bookstore/model/Book.class
 com/landerer/bookstore/MainApplication.class
