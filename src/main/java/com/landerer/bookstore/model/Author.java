@@ -48,6 +48,15 @@ public class Author {
         this.books = books;
     }
 
+    public Author() {
+        this(null, null);
+    }
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

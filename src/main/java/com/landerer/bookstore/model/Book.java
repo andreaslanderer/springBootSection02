@@ -61,6 +61,16 @@ public class Book {
         this.authors = authors;
     }
 
+    public Book() {
+        this(null, null, null);
+    }
+
+    public Book(String title, String isbn, String publisher) {
+        this.title = title;
+        this.isbn = isbn;
+        this.publisher = publisher;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
